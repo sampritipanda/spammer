@@ -35,16 +35,15 @@ get '/mail' do
   puts params
   to_mail = params["to"]
   from_mail = params["from"]
+  subject_mail = params["subject"]
+  html_mail = params["body"]
   mail = Mail.deliver do
     to to_mail
     from from_mail
-    subject 'This is the subject of your email'
-    text_part do
-      body 'Hello world in text'
-    end
+    subject subject_mail
     html_part do
       content_type 'text/html; charset=UTF-8'
-      body '<b>Hello world in HTML</b>'
+      body html_mail
     end
   end
 end
