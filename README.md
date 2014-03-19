@@ -1,4 +1,4 @@
 spammer
 =======
 
-A Email Spammer in Rails
+A Email Spammer in Sinatra
