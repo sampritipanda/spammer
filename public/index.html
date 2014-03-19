@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    // Include Font Awesome
+    <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css"
+
+    // Include editor style file
+    <link href="../css/froala_editor.min.css" rel="stylesheet" type="text/css">
+
+    // Include jQuery library
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+
+    // Include editor javascript file
+    <script src="../js/froala_editor.min.js"></script>
+  </head>
+  <body>
+
+    <h3>Send e-mail to someone@example.com:</h3>
+
+    <form action="/mail" method="post" enctype="text/plain">
+      From:
+      <input type="text" name="mail[from]" /><br>
+      To:
+      <input type="text" name="mail[to]" /><br>
+      E-mail:
+      <input type="text" name="mail[email]" /><br>
+      <input type="submit" value="Send" />
+      <input type="reset" value="Reset" />
+    </form>
+
+  </body>
+</html>
+
