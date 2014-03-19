@@ -32,9 +32,12 @@ get '/' do
 end
 
 get '/mail' do
+  puts params
+  to_mail = params["to"]
+  from_mail = params["from"]
   mail = Mail.deliver do
-    to params[:to]
-    from params[:from]
+    to to_mail
+    from from_mail
     subject 'This is the subject of your email'
     text_part do
       body 'Hello world in text'
